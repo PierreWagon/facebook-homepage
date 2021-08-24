@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/icons8-facebook.svg" />
+  <title>Facebook</title>
+</head>
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar-wrapper">
+    <!-- Left part : Icon and search bar -->
+    <div class="navbar-left">
+      <img class="fb-icon" src="images/icons8-facebook.svg" alt="FB logo">
+      <input type="text" id="navbar-search" placeholder="Rechercher sur Facebook">
+    </div>
+
+    <!-- Center part : Navigation icons (Home, Friends, Marketplace...) -->
+    <div class="navbar-middle">
+      <div class="navbar-icon active">
+        <img src="images/home.svg" alt="home">
+      </div>
+
+      <div class="navbar-icon">
+        <img src="images/friends.svg" alt="friends">
+      </div>
+
+      <div class="navbar-icon">
+        <img  src="images/video.svg" alt="video">
+        <p class="notif">2</p>
+      </div>
+
+      <div class="navbar-icon">
+        <img src="images/shopping-cart.svg" alt="shopping">
+      </div>
+
+      <div class="navbar-icon">
+        <img src="images/world.svg" alt="groups">
+      </div>
+    </div>
+
+    <!-- Right part : Profile, notifications, messenger... -->
+    <div class="navbar-right">
+      <div class="profile-wrapper">
+        <img class="profile-pic" src="images/profile-1.jpg" alt="profile pic">
+        <p>Maria</p>
+      </div>
+
+      <div class="profile-icons">
+        <img class="profile-icon" id="menu-btn" src="images/grid-dots.svg" alt="menu">
+        <img class="profile-icon" id="messenger-btn" src="images/brand-messenger.svg" alt="messenger">
+        <img class="profile-icon" id="notification-btn" src="images/bell-ringing-2.svg" alt="notifications">
+        <img class="profile-icon" id="more-btn" src="images/caret-down.svg" alt="menu-more">
+      </div>
+    </div>
+
+    <!-- Navbar Modals -->
+
+    <!-- Search bar modal -->
+    <div class="search-modal">
+      <div class="search-modal-title">
+        <h3>Recherches récentes</h3>
+        <p class="link background-on-hover">Modifier</p>
+      </div>
+
+      <div class="search-modal-result background-on-hover">
+        <img class="profile-pic" src="images/profile-2.jpg" alt="profile pic">
+        <p>Miley Johansson</p>
+        <img class="search-modal-close" src="images/x.svg" alt="close">
+      </div>
+
+      <div class="search-modal-result background-on-hover">
+        <img class="profile-pic" src="images/profile-3.jpg" alt="profile pic">
+        <p>Hervé Martelin</p>
+        <img class="search-modal-close" src="images/x.svg" alt="close">
+      </div>
+
+      <div class="search-modal-result background-on-hover">
+        <img class="profile-pic" src="images/profile-5.jpg" alt="profile pic">
+        <p>Olga Slaptovsky</p>
+        <img class="search-modal-close" src="images/x.svg" alt="close">
+      </div>
+    </div>
+
+    <!-- Menu modal -->
+    <div class="menu-modal">
+      <h3>Menu</h3>
+      <div class="menu-modal-content">
+        <div class="menu-modal-content-left">
+          <input type="text" placeholder="Rechercher dans le menu">
+          <!-- Left menu displaying all options -->
+          <h4>Social</h4>
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/calendar.svg" alt="calendar">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Évènements</h5>
+              <p>Trouvez des activités et des évènements auxquels vous pouvez participer en ligne ou en personne près de chez vous, ou organisez-en.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/collaboration.svg" alt="friends">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Amis</h5>
+              <p>Trouvez des amis ou des personnes que vous connaissez.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/conference_call.svg" alt="groups">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Groupes</h5>
+              <p>Entrez en contact avec des personnes qui partagent vos centres d'intérêt.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/timeline.svg" alt="fil">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Fil d'actualité</h5>
+              <p>Consultez des publications pertinentes mises en ligne par des personnes et des Pages que vous suivez.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/two_smartphones.svg" alt="pages">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Pages</h5>
+              <p>Découvrez des entreprises et entrez en contact avec elles sur Facebook.</p>
+            </div>
+          </div>
+
+          <h4>Divertissement</h4>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/clapperboard.svg" alt="vidéos de jeux">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Vidéos de jeux</h5>
+              <p>Regardez des parties et suivez les streamers que vous aimez.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/headset.svg" alt="headset">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Jouer à des jeux</h5>
+              <p>Jouez à vos jeux favoris.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/selfie.svg" alt="selfie">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Watch</h5>
+              <p>Découvrez des suggestions de vidéos basées sur vos centres d'intérêt et vos contacts.</p>
+            </div>
+          </div>
+
+          <h4>Professionnel</h4>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/combo_chart.svg" alt="pubs">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Gestionnaire de publicités</h5>
+              <p>Créez, gérez et suivez les performances de vos publicités.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/diploma_1.svg" alt="job">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Offres d'emploi</h5>
+              <p>Trouvez un emploi qui vous convient.</p>
+            </div>
+          </div>
+
+          <h4>Voir plus de produits Facebook</h4>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/messenger_logo.svg" alt="messenger">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Messenger</h5>
+              <p>Discutez instantanément avec vos amis et vos contacts.</p>
+            </div>
+          </div>
+
+          <div class="menu-modal-content-left-item background-on-hover">
+            <img class="menu-modal-content-left-icon" src="images/oculus-rift.svg" alt="oculus">
+            <div class="menu-modal-content-left-item-text">
+              <h5>Oculus</h5>
+              <p>Explorez la réalité virtuelle avec une liberté sans égale.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="menu-modal-content-right">
+          <h4>Créer</h4>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/edit.svg" alt="publication">
+            <h5>Publication</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/book.svg" alt="story">
+            <h5>Story</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/star.svg" alt="event">
+            <h5>Évènement marquant</h5>
+          </div>
+
+          <span id="menu-modal-content-right-separation"></span>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/flag-3.svg" alt="page">
+            <h5>Page</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/speakerphone.svg" alt="micro">
+            <h5>Publicité</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/friends.svg" alt="friends">
+            <h5>Groupe</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/clipboard-list.svg" alt="event">
+            <h5>Évènement</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/basket.svg" alt="shopping">
+            <h5>Petite annonce Marketplace</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/coin.svg" alt="coin">
+            <h5>Collecte de fonds</h5>
+          </div>
+
+          <div class="menu-modal-content-right-item background-on-hover">
+            <img class="menu-modal-content-right-icon" src="images/briefcase.svg" alt="offre d'emploi">
+            <h5>Offre d'emploi</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Messenger Modal -->
+    <div class="messenger-modal">
+      <div class="messenger-modal-title">
+        <h3>Messenger</h3>
+        <img src="images/dots.svg" class="background-on-hover" alt="dots">
+        <img src="images/arrows-maximize.svg" class="background-on-hover" alt="agrandir">
+        <img src="images/video-plus.svg" class="background-on-hover" alt="video">
+        <img src="images/edit.svg" class="background-on-hover" alt="edit">
+      </div>
+      <input type="text" placeholder="Rechercher dans Messenger">
+
+      <!-- List of items / messages on messenger -->
+      <div class="messenger-modal-item-wrapper">
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-6.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Madelyn Bowman</p>
+              <p class="messenger-modal-item-text-message">Ok, à bientôt. · 1h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-7.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Tomas Carpenter</p>
+              <p class="messenger-modal-item-text-message">Viens jouer à Rocket League g... · 1h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-8.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Tulisa Wilkinson</p>
+              <p class="messenger-modal-item-text-message">Vous: Il fait vraiment beau au... · 2h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-9.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Roberta Maxwell</p>
+              <p class="messenger-modal-item-text-message">😊😊😊😊😊 · 2h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-10.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Zoey Rubio</p>
+              <p class="messenger-modal-item-text-message">Vous: Le rapport est à rendre ... · 5h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Angela Dall</p>
+              <p class="messenger-modal-item-text-message">J'ai envie de hamburgers. 🍔 · 8h</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-12.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Kevin Phelps</p>
+              <p class="messenger-modal-item-text-message">Flemme de sortir aujourd'hui · 1j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-13.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Yousef Peralta</p>
+              <p class="messenger-modal-item-text-message">/watch?v=dQw4w9WgXcQ · 1j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-14.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Sarah-Jane Blackmore</p>
+              <p class="messenger-modal-item-text-message">Je t'envoie le dossier dès que j... · 2j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-15.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Shania Dickinson</p>
+              <p class="messenger-modal-item-text-message">Vous: J'écris tout ça pour tester... · 3j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-16.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Zayn Sullivan</p>
+              <p class="messenger-modal-item-text-message">Si tu scrolles, tu me vois. · 4j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+
+        <div class="messenger-modal-item background-on-hover">
+          <div class="messenger-modal-item-picture">
+            <img class="profile-pic" src="images/profile-17.jpg" alt="profile pic">
+            <div class="messenger-modal-item-text">
+              <p class="messenger-modal-item-text-name">Cassius Fritz</p>
+              <p class="messenger-modal-item-text-message">Je suis super content. 😁🤮 · 6j</p>
+            </div>
+          </div>
+          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+        </div>
+      </div>
+      <p class="messenger-modal-bottom">Tout voir dans Messenger</p>
+
+    </div>
+
+  </nav>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

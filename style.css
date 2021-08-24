@@ -1,0 +1,555 @@
+/* ----- Reset ----- */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- General ----- */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----- Reusable components ----- */
+/* Notification */
+.notif {
+    padding: 2px 5px;
+    border-radius: 50%;
+    background-color: #E5314F;
+    position: absolute;
+    top: 0px;
+    right: 30%;
+    font-size: 0.7em;
+    color: white;
+    font-weight: 600;
+}
+
+/*Hover Effect*/
+.background-on-hover {
+    transition: background-color 0.3s;
+}
+
+.background-on-hover:hover {
+    background-color: #F2F2F2;
+    transition: background-color 0s;
+}
+
+/* ----- Navbar ----- */
+.navbar-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-wrapper img {
+    cursor: pointer;
+}
+
+.navbar-left, .navbar-right, .profile-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    min-width: 300px;
+}
+
+.fb-icon {
+    margin-right: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.fb-icon.hidden {
+    animation: iconOut 0.3s linear forwards;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+@keyframes iconOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-8px);
+        content: url(images/arrow-left.svg);
+    }
+}
+
+.fb-icon.hidden:hover {
+    background-color: #F2F2F2;
+    transition: background-color 0s;
+}
+
+.navbar-wrapper input {
+    position: relative;
+    z-index: 10;
+    outline: none;
+    background-color: #F0F2F5;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 24px;
+    font-size: 0.9em;
+    background-image: url(images/search.svg);
+    background-repeat: no-repeat;
+    background-position-x: 8px;
+    background-position-y: 50%;
+    background-size: 18px;
+    transition: padding 0.3s;
+    min-width: 230px;
+}
+
+.navbar-wrapper input:focus {
+    background-image: none;
+    padding: 12px 30px 12px 10px;
+}
+
+
+.navbar-middle {
+    display: flex;
+}
+
+.navbar-icon {
+    position: relative;
+    padding: 4px 40px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.navbar-icon:not(.active):hover {
+    background-color: #F2F2F2;
+    transition: background-color 0s;
+}
+
+.navbar-icon img{
+    width: 28px;
+    opacity: 0.6;
+}
+
+.navbar-icon.active img {
+    filter: invert(43%) sepia(58%) saturate(4368%) hue-rotate(200deg) brightness(94%) contrast(103%);
+    opacity: 1;
+}
+
+.navbar-icon.active::after {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #1877F2;
+}
+
+.profile-pic {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-wrapper {
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    padding: 4px 10px 4px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.profile-wrapper:hover {
+    background-color: #F2F2F2;
+    transition: background-color 0s;
+}
+
+.profile-icon {
+    background-color: #E4E6EB;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 0 5px;
+}
+
+.profile-icon:hover {
+    background-color: #D8DADF;
+}
+
+#menu-btn.active {
+    background-color: #E7F3FF;
+    content: url(images/grid-dots-active.svg);
+}
+
+#messenger-btn.active {
+    background-color: #E7F3FF;
+    content: url(images/brand-messenger-active.svg);
+}
+
+#notification-btn.active {
+    background-color: #E7F3FF;
+    content: url(images/bell-ringing-2-active.svg);
+}
+
+#more-btn.active {
+    background-color: #E7F3FF;
+    content: url(images/caret-down-active.svg);
+}
+
+#menu-btn.active:hover, #messenger-btn.active:hover, #notification-btn.active:hover, #more-btn.active:hover {
+    background-color: #DBE7F2;
+}
+
+/* Search bar modal */
+.search-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 72px 14px 14px 14px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    min-width: 320px;
+    display: none;
+}
+
+.search-modal.active {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        }
+    to {
+        opacity: 1;
+    }
+}
+
+.search-modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-modal-title h3 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.search-modal-title p {
+    font-size: 0.9em;
+    color: #1877F2;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.search-modal-result {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.search-modal-result .profile-pic {
+    margin-right: 15px;
+}
+
+.search-modal-close {
+    margin-left: auto;
+    width: 26px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.search-modal-close:hover {
+    background-color: #D7D8D9;
+}
+
+
+/* Menu Modal */
+.menu-modal {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 16px;
+    background-color: #F7F8FA;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 6px;
+    max-height: 850px;
+}
+
+.menu-modal.active {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+}
+
+.menu-modal h3 {
+    margin-bottom: 16px;
+}
+
+.menu-modal-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-modal-content-left {
+    max-width: 300px;
+    overflow-y: scroll;
+    max-height: 780px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    padding: 14px;
+}
+
+/*Scrollbar*/
+.menu-modal-content-left::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+}
+
+.menu-modal-content-left::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.menu-modal-content-left::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: transparent;
+    max-height: 40px;
+    border-radius: 6px;
+}
+
+.menu-modal-content-left:hover::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #BCC0C4;
+    max-height: 40px;
+    border-radius: 6px;
+}
+
+.menu-modal-content-left h4 {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.menu-modal-content-left h4:first-of-type {
+    margin-top: 16px;
+}
+
+.menu-modal-content-left h4:not(:first-of-type) {
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+.menu-modal-content-left-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.menu-modal-content-left-icon {
+    width: 32px;
+    margin-right: 12px;
+}
+
+.menu-modal-content-left-item-text h5 {
+    font-size: 0.9em;
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+}
+
+.menu-modal-content-left-item-text p {
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.6);
+}
+
+.menu-modal-content-right {
+    margin-left: 15px;
+    max-width: 200px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    padding: 14px;
+}
+
+.menu-modal-content-right h4 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+.menu-modal-content-right-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.menu-modal-content-right-item img {
+    padding: 6px;
+    background-color: #E4E6EB;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-modal-content-right-item h5 {
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+
+/* ----- Messenger modal ----- */
+.messenger-modal {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 6px;
+    max-height: 850px;
+    width: 375px;
+}
+
+.messenger-modal.active {
+    display: block;
+    animation: fadeIn linear 0.3s forwards;
+}
+
+.messenger-modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.messenger-modal-title h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.messenger-modal-title img {
+    padding: 6px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.messenger-modal input {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.messenger-modal-item {
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.messenger-modal-item-wrapper {
+    overflow-y: scroll;
+    max-height: 695px;
+}
+
+/*Scrollbar*/
+.messenger-modal-item-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+}
+
+.messenger-modal-item-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.messenger-modal-item-wrapper::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: transparent;
+    max-height: 40px;
+    border-radius: 6px;
+}
+
+.messenger-modal-item-wrapper:hover::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #BCC0C4;
+    max-height: 40px;
+    border-radius: 6px;
+}
+
+.messenger-modal-item-picture {
+    display: flex;
+    align-items: center;
+}
+
+.messenger-modal-item-picture img {
+    width: 56px;
+    border: 1px solid rgba(0,0,0,0.4);
+    margin-right: 12px;
+}
+
+.messenger-modal-item-text-name {
+    font-size: 0.9em;
+}
+
+.messenger-modal-item-text-message {
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.7);
+}
+
+.messenger-modal-item-option {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.4);
+    transition: background-color 0.3s;
+}
+
+.messenger-modal-item-option:hover {
+    background-color: #F2F2F2;
+}
+
+.messenger-modal-item:hover .messenger-modal-item-option {
+    display: block;
+}
+
+.messenger-modal-bottom {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #1877F2;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.messenger-modal-bottom:hover {
+    text-decoration: underline;
+}
