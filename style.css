@@ -120,6 +120,7 @@ a {
     position: fixed;
     width: 100%;
     background-color: #fff;
+    z-index: 2;
 }
 
 .navbar-wrapper img {
@@ -520,6 +521,7 @@ a {
     border-radius: 6px;
     max-height: 850px;
     width: 375px;
+    z-index: 10;
 }
 
 .messenger-modal.active {
@@ -1002,6 +1004,7 @@ a {
     padding: 6px;
     border-radius: 6px;
     margin-bottom: 2px;
+    z-index: 1;
 }
 
 .main-wrapper-right-contacts-item img {
