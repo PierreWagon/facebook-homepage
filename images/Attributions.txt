@@ -1,1 +1,4 @@
-Icons : Freepik
+Freepik : Some icons
+Dave Gandy : GitHub icon
+Viktor Talashuk : Phone picture used for fake ad
+Roland Denes : Car used for fake ad

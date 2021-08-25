@@ -11,6 +11,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ----- Reusable components ----- */
 /* Notification */
 .notif {
@@ -25,7 +30,26 @@ body {
     font-weight: 600;
 }
 
+/* Bubbles in notification modal showing what kind of notificzation you received */
+.notification-modal-bubble {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 6px;
+    width: 28px;
+    border-radius: 50%;
+}
+
+.notification-modal-bubble.green {
+    background: linear-gradient(#68E487, #1CB642);
+}
+
+.notification-modal-bubble.blue {
+    background: linear-gradient(#22AFFC, #0266E2);
+}
+
 /*Hover Effect*/
+/*On light bg*/
 .background-on-hover {
     transition: background-color 0.3s;
 }
@@ -33,6 +57,56 @@ body {
 .background-on-hover:hover {
     background-color: #F2F2F2;
     transition: background-color 0s;
+}
+
+/*On darker bg*/
+.background-on-hover-darker {
+    transition: background-color 0.3s;
+}
+
+.background-on-hover-darker:hover {
+    background-color: #E4E6E8;
+    transition: background-color 0s;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: transparent;
+    max-height: 40px;
+    border-radius: 6px;
+}
+/*ligher thumb*/
+.messenger-modal-item-wrapper:hover::-webkit-scrollbar-thumb, .notification-modal:hover::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #BCC0C4;
+    max-height: 40px;
+    border-radius: 6px;
+}
+/*darker thumb*/
+.main-wrapper-left:hover::-webkit-scrollbar-thumb, .main-wrapper-right:hover::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #BCC0C4;
+    max-height: 40px;
+    border-radius: 6px;
+}
+
+/*Separator*/
+.more-modal-separation, .separation {
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+    display: block;
 }
 
 /* ----- Navbar ----- */
@@ -45,6 +119,7 @@ body {
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
+    background-color: #fff;
 }
 
 .navbar-wrapper img {
@@ -153,6 +228,10 @@ body {
     width: 100%;
     height: 3px;
     background-color: #1877F2;
+}
+
+.navbar-right {
+    width: 310px;
 }
 
 .profile-pic {
@@ -415,8 +494,17 @@ body {
 }
 
 .menu-modal-content-right-item h5 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9em;
+}
+
+#menu-modal-content-right-separation {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 6px;
 }
 
 
@@ -475,30 +563,6 @@ body {
     max-height: 695px;
 }
 
-/*Scrollbar*/
-.messenger-modal-item-wrapper::-webkit-scrollbar {
-    width: 10px;
-    height: 100%;
-}
-
-.messenger-modal-item-wrapper::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.messenger-modal-item-wrapper::-webkit-scrollbar-thumb {
-    width: 4px;
-    background-color: transparent;
-    max-height: 40px;
-    border-radius: 6px;
-}
-
-.messenger-modal-item-wrapper:hover::-webkit-scrollbar-thumb {
-    width: 4px;
-    background-color: #BCC0C4;
-    max-height: 40px;
-    border-radius: 6px;
-}
-
 .messenger-modal-item-picture {
     display: flex;
     align-items: center;
@@ -552,4 +616,422 @@ body {
 
 .messenger-modal-bottom:hover {
     text-decoration: underline;
+}
+
+/* ----- Notification Modal ----- */
+.notification-modal {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 6px;
+    max-height: 850px;
+    width: 375px;
+    overflow-y: scroll;
+}
+
+.notification-modal.active {
+    display: block;
+    animation: fadeIn linear 0.3s forwards;
+}
+
+.notification-modal-title, .notification-modal-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.notification-modal-title img {
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.notification-modal-subtitle h4 {
+    font-weight: 600;
+}
+
+.notification-modal-subtitle p {
+    color: #1877F2;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.notification-modal-item {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 6px 12px 6px 6px;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.notification-modal-item-picture img {
+    width: 56px;
+    border: 1px solid rgba(0,0,0,0.4);
+    margin-right: 12px;
+}
+
+.notification-modal-item-text {
+    color: #6B6D71;
+    font-size: 0.9em;
+}
+
+.notification-modal-item-text .notification-modal-name {
+    font-weight: 600;
+}
+
+.notification-modal-item-text .notification-modal-time {
+    font-size: 0.85em;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+.notification-modal-item-option {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.4);
+    transition: background-color 0.3s;
+}
+
+.notification-modal-item-option:hover {
+    background-color: #F2F2F2;
+}
+
+.notification-modal-item:hover .notification-modal-item-option {
+    display: block;
+}
+
+/* ----- More Modal ----- */
+.more-modal {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 6px;
+    max-height: 850px;
+    width: 375px;
+}
+
+.more-modal.active {
+    display: block;
+    animation: fadeIn linear 0.3s forwards;
+}
+
+.more-modal-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.more-modal-title-picture img {
+    width: 56px;
+    border: 1px solid rgba(0,0,0,0.4);
+    margin-right: 12px;
+}
+
+.more-modal-title-text-name {
+    font-weight: 600;
+}
+
+.more-modal-title-text-option {
+    font-size: 0.9em;
+    color: #6B6D71;
+}
+
+.more-modal-avis {
+    display: flex;
+    align-items: flex-start;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 6px 0;
+}
+
+.more-modal-avis-picture img, .more-modal .rounded-icon {
+    width: 38px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #E4E6EB;
+    margin-right: 12px;
+}
+
+.more-modal-avis-text-title {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.more-modal-avis-text-content {
+    margin-top: 4px;
+    font-size: 0.8em;
+    color: #6B6D71;
+}
+
+.more-modal-option {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.more-modal-option p {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.more-modal-option .chevron {
+    margin-left: auto;
+}
+
+.more-modal-credits {
+    margin-top: 8px;
+    color: #6B6D71;
+    font-size: 0.79em;
+}
+
+.more-modal-credits span {
+    cursor: pointer;
+}
+
+.more-modal-credits span:hover {
+    text-decoration: underline;
+}
+
+  /* ------------------------------------------- */
+ /* ---------- END OF NAVIGATION BAR -----------*/
+/* --------------------------------------------*/
+
+  /* ------------------------------------------- */
+ /* ---------- MAIN CONTENT WRAPPER ------------*/
+/* --------------------------------------------*/
+.main-wrapper {
+    padding: 0 16px;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Left part of main content */
+.main-wrapper-left {
+    padding: 80px 0 16px;
+    min-width: 300px;
+    max-width: 300px;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.main-wrapper-left-options-list-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.main-wrapper-left-options-list-option img {
+    width: 36px;
+    margin-right: 14px;
+}
+
+.main-wrapper-left-options-list-option p {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.main-wrapper-left-options-list-option-watch p:nth-child(2) {
+    color: #1876F2;
+    font-size: 0.7em;
+}
+
+.main-wrapper-left-options-list-option-watch img {
+    width: 18px;
+    margin: 0;
+}
+
+#main-wrapper-left-voir-plus img {
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #D8DADF;
+}
+
+.main-wrapper-left-options-list.hidden {
+    display: none;
+}
+
+.main-wrapper-left .separation {
+    margin: 12px 0;
+}
+
+.main-wrapper-left-shortcuts h5 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #6D6F73;
+}
+
+.main-wrapper-left-shortcuts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-wrapper-left-shortcuts p {
+    color: #1876F2;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main-wrapper-left-bottom-part:hover p {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.more-modal-credits.main-wrapper-left-credits {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 300px;
+}
+
+.more-modal-credits.main-wrapper-left-credits.active {
+    position: static;
+}
+
+/* Middle part of main content */
+/* CONTINUER ICI */
+
+
+
+/* Right part of main content */
+.main-wrapper-right {
+    padding: 80px 16px 16px;
+    width: 350px;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.main-wrapper-right h5 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #6D6F73;
+    margin-bottom: 18px;
+}
+
+.main-wrapper-right-ad {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.main-wrapper-right-ad-picture {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 8px
+}
+
+.main-wrapper-right-ad-text .ad-name {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.main-wrapper-right-ad-text .ad-address {
+    font-size: 0.8em;
+    color: #6D6F73;
+}
+
+.main-wrapper-right .separation {
+    margin: 12px 0;
+}
+
+.main-wrapper-right-contacts-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.main-wrapper-right-contacts-title h5 {
+    margin-right: auto;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+.main-wrapper-right-contacts-title img {
+    margin: 0 6px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+/*Contact list*/
+.main-wrapper-right-contacts-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+}
+
+.main-wrapper-right-contacts-item img {
+    margin-right: 12px;
+    width: 36px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.main-wrapper-right-contacts-item p {
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.main-wrapper-right-contacts-item .connected-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #2E9A48;
+    position: absolute;
+    left: 30px;
+    bottom: 6px;
+    border: 2px solid #F0F2F5;
+}
+
+.main-wrapper-right-group-chat h5 {
+    margin-bottom: 4px;
+}
+
+.main-wrapper-right-group-chat .profile-pic.plus {
+    border: none;
+    background-color: #D8DADF;
+    padding: 8px;
 }

@@ -1,5 +1,5 @@
-/* ------------------------------------------------------------- */
-/* -------------------------- NAV BAR -------------------------- */
+  /* ------------------------------------------------------------- */
+ /* -------------------------- NAV BAR -------------------------- */
 /* ------------------------------------------------------------- */
 
 // Hiding FB logo and displaying history when focusing on search input
@@ -28,6 +28,10 @@ menuBtn.addEventListener('click', e => {
 
     messengerModal.classList.remove('active');
     messengerBtn.classList.remove('active');
+    notificationModal.classList.remove('active');
+    notificationBtn.classList.remove('active');
+    moreModal.classList.remove('active');
+    moreBtn.classList.remove('active');
 })
 
 // Displaying messenger modal
@@ -40,24 +44,68 @@ messengerBtn.addEventListener('click', e => {
 
     menuModal.classList.remove('active');
     menuBtn.classList.remove('active');
+    notificationModal.classList.remove('active');
+    notificationBtn.classList.remove('active');
+    moreModal.classList.remove('active');
+    moreBtn.classList.remove('active');
 })
 
 // Displaying notification modal
 const notificationBtn = document.getElementById('notification-btn');
-//const notificationModal = document.querySelector('.notification-modal');
+const notificationModal = document.querySelector('.notification-modal');
 
 notificationBtn.addEventListener('click', e => {
-    //notificationModal.classList.toggle('active');
+    notificationModal.classList.toggle('active');
     notificationBtn.classList.toggle('active');
+
+    messengerModal.classList.remove('active');
+    messengerBtn.classList.remove('active');
+    menuModal.classList.remove('active');
+    menuBtn.classList.remove('active');
+    moreModal.classList.remove('active');
+    moreBtn.classList.remove('active');
 })
 
 // Displaying more modal
 const moreBtn = document.getElementById('more-btn');
-//const moreModal = document.querySelector('.more-modal');
+const moreModal = document.querySelector('.more-modal');
 
 moreBtn.addEventListener('click', e => {
-    //moreModal.classList.toggle('active');
+    moreModal.classList.toggle('active');
     moreBtn.classList.toggle('active');
+
+    messengerModal.classList.remove('active');
+    messengerBtn.classList.remove('active');
+    menuModal.classList.remove('active');
+    menuBtn.classList.remove('active');
+    notificationModal.classList.remove('active');
+    notificationBtn.classList.remove('active');
 })
 
-// Ne pas oublier de fermer les autres modales et d'enlever les classes Active quand on clique sur un nouvel onglet
+  /* ------------------------------------------------------------- */
+ /* ------------------- MAIN MENU LEFT PART --------------------- */
+/* ------------------------------------------------------------- */
+
+// Displays more shortcuts clicking on "Voir plus" button
+const voirPlusBtn = document.getElementById('main-wrapper-left-voir-plus');
+const hiddenOptions = document.querySelectorAll('.main-wrapper-left-options-list.hidden');
+const voirPlusCredits = document.querySelector('.more-modal-credits.main-wrapper-left-credits');
+let voirPlusIsActive = false;
+
+voirPlusBtn.addEventListener('click', e => {
+    hiddenOptions.forEach(option => {
+        option.classList.toggle('hidden');
+    })
+    if (!voirPlusIsActive) {
+        document.querySelector('#main-wrapper-left-voir-plus p').textContent = "Voir moins";
+        voirPlusIsActive = true;
+        document.querySelector('#main-wrapper-left-voir-plus img').style.transform = "rotate(180deg)";
+        voirPlusCredits.classList.add('active');
+    }
+    else {
+        document.querySelector('#main-wrapper-left-voir-plus p').textContent = "Voir plus";
+        voirPlusIsActive = false;
+        document.querySelector('#main-wrapper-left-voir-plus img').style.transform = "rotate(0deg)";
+        voirPlusCredits.classList.remove('active');
+    }
+})
