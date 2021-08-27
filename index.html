@@ -11,908 +11,1261 @@
   <title>Facebook</title>
 </head>
 <body>
-  <!-- Nav Bar -->
-  <nav class="navbar-wrapper">
-    <!-- Left part : Icon and search bar -->
-    <div class="navbar-left">
-      <img class="fb-icon" src="images/icons8-facebook.svg" alt="FB logo">
-      <input type="text" id="navbar-search" placeholder="Rechercher sur Facebook">
-    </div>
-
-    <!-- Center part : Navigation icons (Home, Friends, Marketplace...) -->
-    <div class="navbar-middle">
-      <div class="navbar-icon active">
-        <img src="images/home.svg" alt="home">
+  <div class="global-wrapper">
+    <!-- Nav Bar -->
+    <nav class="navbar-wrapper">
+      <!-- Left part : Icon and search bar -->
+      <div class="navbar-left">
+        <img class="fb-icon" src="images/icons8-facebook.svg" alt="FB logo">
+        <input type="text" id="navbar-search" placeholder="Rechercher sur Facebook">
       </div>
 
-      <div class="navbar-icon">
-        <img src="images/friends.svg" alt="friends">
-      </div>
-
-      <div class="navbar-icon">
-        <img  src="images/video.svg" alt="video">
-        <p class="notif">2</p>
-      </div>
-
-      <div class="navbar-icon">
-        <img src="images/shopping-cart.svg" alt="shopping">
-      </div>
-
-      <div class="navbar-icon">
-        <img src="images/world.svg" alt="groups">
-      </div>
-    </div>
-
-    <!-- Right part : Profile, notifications, messenger... -->
-    <div class="navbar-right">
-      <div class="profile-wrapper">
-        <img class="profile-pic" src="images/profile-1.jpg" alt="profile pic">
-        <p>Maria</p>
-      </div>
-
-      <div class="profile-icons">
-        <img class="profile-icon" id="menu-btn" src="images/grid-dots.svg" alt="menu">
-        <img class="profile-icon" id="messenger-btn" src="images/brand-messenger.svg" alt="messenger">
-        <img class="profile-icon" id="notification-btn" src="images/bell-ringing-2.svg" alt="notifications">
-        <img class="profile-icon" id="more-btn" src="images/caret-down.svg" alt="menu-more">
-      </div>
-    </div>
-
-    <!-- Navbar Modals -->
-
-    <!-- Search bar modal -->
-    <div class="search-modal">
-      <div class="search-modal-title">
-        <h3>Recherches récentes</h3>
-        <p class="link background-on-hover">Modifier</p>
-      </div>
-
-      <div class="search-modal-result background-on-hover">
-        <img class="profile-pic" src="images/profile-2.jpg" alt="profile pic">
-        <p>Miley Johansson</p>
-        <img class="search-modal-close" src="images/x.svg" alt="close">
-      </div>
-
-      <div class="search-modal-result background-on-hover">
-        <img class="profile-pic" src="images/profile-3.jpg" alt="profile pic">
-        <p>Hervé Martelin</p>
-        <img class="search-modal-close" src="images/x.svg" alt="close">
-      </div>
-
-      <div class="search-modal-result background-on-hover">
-        <img class="profile-pic" src="images/profile-5.jpg" alt="profile pic">
-        <p>Olga Slaptovsky</p>
-        <img class="search-modal-close" src="images/x.svg" alt="close">
-      </div>
-    </div>
-
-    <!-- Menu modal -->
-    <div class="menu-modal">
-      <h3>Menu</h3>
-      <div class="menu-modal-content">
-        <div class="menu-modal-content-left">
-          <input type="text" placeholder="Rechercher dans le menu">
-          <!-- Left menu displaying all options -->
-          <h4>Social</h4>
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/calendar.svg" alt="calendar">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Évènements</h5>
-              <p>Trouvez des activités et des évènements auxquels vous pouvez participer en ligne ou en personne près de chez vous, ou organisez-en.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/collaboration.svg" alt="friends">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Amis</h5>
-              <p>Trouvez des amis ou des personnes que vous connaissez.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/conference_call.svg" alt="groups">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Groupes</h5>
-              <p>Entrez en contact avec des personnes qui partagent vos centres d'intérêt.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/timeline.svg" alt="fil">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Fil d'actualité</h5>
-              <p>Consultez des publications pertinentes mises en ligne par des personnes et des Pages que vous suivez.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/two_smartphones.svg" alt="pages">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Pages</h5>
-              <p>Découvrez des entreprises et entrez en contact avec elles sur Facebook.</p>
-            </div>
-          </div>
-
-          <h4>Divertissement</h4>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/clapperboard.svg" alt="vidéos de jeux">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Vidéos de jeux</h5>
-              <p>Regardez des parties et suivez les streamers que vous aimez.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/headset.svg" alt="headset">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Jouer à des jeux</h5>
-              <p>Jouez à vos jeux favoris.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/selfie.svg" alt="selfie">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Watch</h5>
-              <p>Découvrez des suggestions de vidéos basées sur vos centres d'intérêt et vos contacts.</p>
-            </div>
-          </div>
-
-          <h4>Professionnel</h4>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/combo_chart.svg" alt="pubs">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Gestionnaire de publicités</h5>
-              <p>Créez, gérez et suivez les performances de vos publicités.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/diploma_1.svg" alt="job">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Offres d'emploi</h5>
-              <p>Trouvez un emploi qui vous convient.</p>
-            </div>
-          </div>
-
-          <h4>Voir plus de produits Facebook</h4>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/messenger_logo.svg" alt="messenger">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Messenger</h5>
-              <p>Discutez instantanément avec vos amis et vos contacts.</p>
-            </div>
-          </div>
-
-          <div class="menu-modal-content-left-item background-on-hover">
-            <img class="menu-modal-content-left-icon" src="images/oculus-rift.svg" alt="oculus">
-            <div class="menu-modal-content-left-item-text">
-              <h5>Oculus</h5>
-              <p>Explorez la réalité virtuelle avec une liberté sans égale.</p>
-            </div>
-          </div>
-
+      <!-- Center part : Navigation icons (Home, Friends, Marketplace...) -->
+      <div class="navbar-middle">
+        <div class="navbar-icon active">
+          <img src="images/home.svg" alt="home">
         </div>
 
-        <div class="menu-modal-content-right">
-          <h4>Créer</h4>
+        <div class="navbar-icon">
+          <img src="images/friends.svg" alt="friends">
+        </div>
 
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/edit.svg" alt="publication">
-            <h5>Publication</h5>
-          </div>
+        <div class="navbar-icon">
+          <img  src="images/video.svg" alt="video">
+          <p class="notif">2</p>
+        </div>
 
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/book.svg" alt="story">
-            <h5>Story</h5>
-          </div>
+        <div class="navbar-icon">
+          <img src="images/shopping-cart.svg" alt="shopping">
+        </div>
 
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/star.svg" alt="event">
-            <h5>Évènement marquant</h5>
-          </div>
-
-          <span id="menu-modal-content-right-separation"></span>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/flag-3.svg" alt="page">
-            <h5>Page</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/speakerphone.svg" alt="micro">
-            <h5>Publicité</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/friends.svg" alt="friends">
-            <h5>Groupe</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/clipboard-list.svg" alt="event">
-            <h5>Évènement</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/basket.svg" alt="shopping">
-            <h5>Petite annonce Marketplace</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/coin.svg" alt="coin">
-            <h5>Collecte de fonds</h5>
-          </div>
-
-          <div class="menu-modal-content-right-item background-on-hover">
-            <img class="menu-modal-content-right-icon" src="images/briefcase.svg" alt="offre d'emploi">
-            <h5>Offre d'emploi</h5>
-          </div>
+        <div class="navbar-icon">
+          <img src="images/world.svg" alt="groups">
         </div>
       </div>
-    </div>
 
-    <!-- Messenger Modal -->
-    <div class="messenger-modal">
-      <div class="messenger-modal-title">
-        <h3>Messenger</h3>
-        <img src="images/dots.svg" class="background-on-hover" alt="dots">
-        <img src="images/arrows-maximize.svg" class="background-on-hover" alt="agrandir">
-        <img src="images/video-plus.svg" class="background-on-hover" alt="video">
-        <img src="images/edit.svg" class="background-on-hover" alt="edit">
-      </div>
-      <input type="text" placeholder="Rechercher dans Messenger">
-
-      <!-- List of items / messages on messenger -->
-      <div class="messenger-modal-item-wrapper">
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-6.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Madelyn Bowman</p>
-              <p class="messenger-modal-item-text-message">Ok, à bientôt. · 1h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-7.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Tomas Carpenter</p>
-              <p class="messenger-modal-item-text-message">Viens jouer à Rocket League g... · 1h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-8.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Tulisa Wilkinson</p>
-              <p class="messenger-modal-item-text-message">Vous: Il fait vraiment beau au... · 2h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-9.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Roberta Maxwell</p>
-              <p class="messenger-modal-item-text-message">😊😊😊😊😊 · 2h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-10.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Zoey Rubio</p>
-              <p class="messenger-modal-item-text-message">Vous: Le rapport est à rendre ... · 5h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Angela Dall</p>
-              <p class="messenger-modal-item-text-message">J'ai envie de hamburgers. 🍔 · 8h</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-12.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Kevin Phelps</p>
-              <p class="messenger-modal-item-text-message">Flemme de sortir aujourd'hui · 1j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-13.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Yousef Peralta</p>
-              <p class="messenger-modal-item-text-message">/watch?v=dQw4w9WgXcQ · 1j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-14.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Sarah-Jane Blackmore</p>
-              <p class="messenger-modal-item-text-message">Je t'envoie le dossier dès que j... · 2j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-15.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Shania Dickinson</p>
-              <p class="messenger-modal-item-text-message">Vous: J'écris tout ça pour tester... · 3j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-16.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Zayn Sullivan</p>
-              <p class="messenger-modal-item-text-message">Si tu scrolles, tu me vois. · 4j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-
-        <div class="messenger-modal-item background-on-hover">
-          <div class="messenger-modal-item-picture">
-            <img class="profile-pic" src="images/profile-17.jpg" alt="profile pic">
-            <div class="messenger-modal-item-text">
-              <p class="messenger-modal-item-text-name">Cassius Fritz</p>
-              <p class="messenger-modal-item-text-message">Je suis super content. 😁🤮 · 6j</p>
-            </div>
-          </div>
-          <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
-        </div>
-      </div>
-      <p class="messenger-modal-bottom">Tout voir dans Messenger</p>
-    </div>
-
-    <!-- Notification Modal -->
-    <div class="notification-modal">
-      <div class="notification-modal-title">
-        <h3>Notifications</h3>
-        <img src="images/dots.svg" class="background-on-hover" alt="dots">
-      </div>
-      <div class="notification-modal-subtitle">
-        <h4>Plus tôt</h4>
-        <p class="background-on-hover">Voir tout</p>
-      </div>
-
-      <!-- Notifications list -->
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-12.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Kevin Phelps</span> a commenté la publication de <span class="notification-modal-name">Tulisa Wilkinson</span>.</p>
-          <p class="notification-modal-time">Il y a 1 heure</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble green" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-8.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Tulisa Wilkinson</span> a ajouté une publication.</p>
-          <p class="notification-modal-time">Il y a 1 heure</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-13.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Yousef Peralta</span> a publié un lien : « Il gagne 8000€ par mois grâce à une astuce très simple ».</p>
-          <p class="notification-modal-time">Il y a 2 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-5.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Olga Slaptovsky</span> a commenté votre publication.</p>
-          <p class="notification-modal-time">Il y a 4 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble green" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-3.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Hervé Martelin</span> aime votre publication.</p>
-          <p class="notification-modal-time">Il y a 4 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/like-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Angela Dall</span> a partagé la publication de <span class="notification-modal-name">Burger King France</span>.</p>
-          <p class="notification-modal-time">Il y a 7 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-16.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Zayn Sullivan</span> aime votre publication.</p>
-          <p class="notification-modal-time">Il y a 8 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/like-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-7.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Tomas Carpenter</span> a répondu à votre commentaire sur sa photo.</p>
-          <p class="notification-modal-time">Il y a 13 heures</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble green" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Angela Dall</span> aime votre commentaire : « Ce midi, c'est pizza. 🍕 ».</p>
-          <p class="notification-modal-time">Il y a un jour</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/like-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-15.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Shania Dickinson</span> a une nouvelle photo.</p>
-          <p class="notification-modal-time">Il y a un jour</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/comments-white.svg">
-      </div>
-
-      <div class="notification-modal-item background-on-hover">
-        <div class="notification-modal-item-picture">
-          <img class="profile-pic" src="images/profile-9.jpg" alt="profile pic">
-        </div>
-        <div class="notification-modal-item-text">
-          <p><span class="notification-modal-name">Roberta Maxwell</span> a publié un lien : « 18 photos de chatons tout mignons, la 4ème va vous étonner ! ».</p>
-          <p class="notification-modal-time">Il y a 2 jours</p>
-        </div>
-        <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
-        <img class="notification-modal-bubble blue" src="images/comments-white.svg">
-      </div>   
-    </div>
-
-    <!-- "More" Modal with profile and settings -->
-    <div class="more-modal">
-      <div class="more-modal-title background-on-hover">
-        <div class="more-modal-title-picture">
+      <!-- Right part : Profile, notifications, messenger... -->
+      <div class="navbar-right">
+        <div class="profile-wrapper">
           <img class="profile-pic" src="images/profile-1.jpg" alt="profile pic">
+          <p>Maria</p>
         </div>
-        <div class="more-modal-title-text">
-          <p class="more-modal-title-text-name">Maria Santos</p>
-          <p class="more-modal-title-text-option">Voir votre profil</p>
-        </div>
-      </div>
 
-      <span class="more-modal-separation"></span>
-      <div class="more-modal-avis background-on-hover">
-        <div class="more-modal-avis-picture">
-          <img class="profile-pic" src="images/message-report.svg" alt="report msg">
-        </div>
-        <div class="more-modal-avis-text">
-          <p class="more-modal-avis-text-title">Donner votre avis</p>
-          <p class="more-modal-avis-text-content">Aidez-nous à améliorer la nouvelle version de Facebook.</p>
-        </div>
-      </div>
-      <span class="more-modal-separation"></span>
-
-      <!-- Options on more modal (Settings, help, display, log out... )-->
-      <div class="more-modal-option background-on-hover">
-        <img class="rounded-icon" src="images/settings.svg" alt="settings">
-        <p>Paramètres et confidentialité</p>
-        <img class="chevron" src="images/chevron-right.svg" alt="right">
-      </div>
-
-      <div class="more-modal-option background-on-hover">
-        <img class="rounded-icon" src="images/info-circle.svg" alt="info">
-        <p>Aide et assistance</p>
-        <img class="chevron" src="images/chevron-right.svg" alt="right">
-      </div>
-
-      <div class="more-modal-option background-on-hover">
-        <img class="rounded-icon" src="images/moon.svg" alt="moon">
-        <p>Affichage et accessibilité</p>
-        <img class="chevron" src="images/chevron-right.svg" alt="right">
-      </div>
-
-      <div class="more-modal-option background-on-hover">
-        <img class="rounded-icon" src="images/logout.svg" alt="log out">
-        <p>Se déconnecter</p>
-      </div>
-
-      <p class="more-modal-credits"><span>Confidentialité</span> · <span>Conditions générales</span> · <span>Publicités</span> · <span>Choix publicitaires</span> · <span>Cookies</span> · Facebook © 2021</p>
-    </div>
-  </nav>
-  <!-- End Of Navigation Bar -->
-
-  <!-- Main Content Wrapper : Three different sections -->
-  <main class="main-wrapper">
-    <section class="main-wrapper-left">
-      
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/profile-1.jpg" class="profile-pic" alt="profile pic">
-          <p>Maria Santos</p>
+        <div class="profile-icons">
+          <img class="profile-icon" id="menu-btn" src="images/grid-dots.svg" alt="menu">
+          <img class="profile-icon" id="messenger-btn" src="images/brand-messenger.svg" alt="messenger">
+          <img class="profile-icon" id="notification-btn" src="images/bell-ringing-2.svg" alt="notifications">
+          <img class="profile-icon" id="more-btn" src="images/caret-down.svg" alt="menu-more">
         </div>
       </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/collaboration.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Amis</p>
+      <!-- Navbar Modals -->
+
+      <!-- Search bar modal -->
+      <div class="search-modal">
+        <div class="search-modal-title">
+          <h3>Recherches récentes</h3>
+          <p class="link background-on-hover">Modifier</p>
+        </div>
+
+        <div class="search-modal-result background-on-hover">
+          <img class="profile-pic" src="images/profile-2.jpg" alt="profile pic">
+          <p>Miley Johansson</p>
+          <img class="search-modal-close" src="images/x.svg" alt="close">
+        </div>
+
+        <div class="search-modal-result background-on-hover">
+          <img class="profile-pic" src="images/profile-3.jpg" alt="profile pic">
+          <p>Hervé Martelin</p>
+          <img class="search-modal-close" src="images/x.svg" alt="close">
+        </div>
+
+        <div class="search-modal-result background-on-hover">
+          <img class="profile-pic" src="images/profile-5.jpg" alt="profile pic">
+          <p>Olga Slaptovsky</p>
+          <img class="search-modal-close" src="images/x.svg" alt="close">
         </div>
       </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/shop.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Marketplace</p>
-        </div>
-      </div>
+      <!-- Menu modal -->
+      <div class="menu-modal">
+        <h3>Menu</h3>
+        <div class="menu-modal-content">
+          <div class="menu-modal-content-left">
+            <input type="text" placeholder="Rechercher dans le menu">
+            <!-- Left menu displaying all options -->
+            <h4>Social</h4>
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/calendar.svg" alt="calendar">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Évènements</h5>
+                <p>Trouvez des activités et des évènements auxquels vous pouvez participer en ligne ou en personne près de chez vous, ou organisez-en.</p>
+              </div>
+            </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/clock.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Souvenirs</p>
-        </div>
-      </div>
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/collaboration.svg" alt="friends">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Amis</h5>
+                <p>Trouvez des amis ou des personnes que vous connaissez.</p>
+              </div>
+            </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/calendar.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Évènements</p>
-        </div>
-      </div>
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/conference_call.svg" alt="groups">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Groupes</h5>
+                <p>Entrez en contact avec des personnes qui partagent vos centres d'intérêt.</p>
+              </div>
+            </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/conference_call.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Groupes</p>
-        </div>
-      </div>
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/timeline.svg" alt="fil">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Fil d'actualité</h5>
+                <p>Consultez des publications pertinentes mises en ligne par des personnes et des Pages que vous suivez.</p>
+              </div>
+            </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/selfie.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <div class="main-wrapper-left-options-list-option-watch">
-          <p>Watch</p>
-          <p><img src="images/point.svg" alt="point">5 nouvelles vidéos</p>
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/two_smartphones.svg" alt="pages">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Pages</h5>
+                <p>Découvrez des entreprises et entrez en contact avec elles sur Facebook.</p>
+              </div>
+            </div>
+
+            <h4>Divertissement</h4>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/clapperboard.svg" alt="vidéos de jeux">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Vidéos de jeux</h5>
+                <p>Regardez des parties et suivez les streamers que vous aimez.</p>
+              </div>
+            </div>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/headset.svg" alt="headset">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Jouer à des jeux</h5>
+                <p>Jouez à vos jeux favoris.</p>
+              </div>
+            </div>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/selfie.svg" alt="selfie">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Watch</h5>
+                <p>Découvrez des suggestions de vidéos basées sur vos centres d'intérêt et vos contacts.</p>
+              </div>
+            </div>
+
+            <h4>Professionnel</h4>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/combo_chart.svg" alt="pubs">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Gestionnaire de publicités</h5>
+                <p>Créez, gérez et suivez les performances de vos publicités.</p>
+              </div>
+            </div>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/diploma_1.svg" alt="job">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Offres d'emploi</h5>
+                <p>Trouvez un emploi qui vous convient.</p>
+              </div>
+            </div>
+
+            <h4>Voir plus de produits Facebook</h4>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/messenger_logo.svg" alt="messenger">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Messenger</h5>
+                <p>Discutez instantanément avec vos amis et vos contacts.</p>
+              </div>
+            </div>
+
+            <div class="menu-modal-content-left-item background-on-hover">
+              <img class="menu-modal-content-left-icon" src="images/oculus-rift.svg" alt="oculus">
+              <div class="menu-modal-content-left-item-text">
+                <h5>Oculus</h5>
+                <p>Explorez la réalité virtuelle avec une liberté sans égale.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="menu-modal-content-right">
+            <h4>Créer</h4>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/edit.svg" alt="publication">
+              <h5>Publication</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/book.svg" alt="story">
+              <h5>Story</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/star.svg" alt="event">
+              <h5>Évènement marquant</h5>
+            </div>
+
+            <span id="menu-modal-content-right-separation"></span>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/flag-3.svg" alt="page">
+              <h5>Page</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/speakerphone.svg" alt="micro">
+              <h5>Publicité</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/friends.svg" alt="friends">
+              <h5>Groupe</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/clipboard-list.svg" alt="event">
+              <h5>Évènement</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/basket.svg" alt="shopping">
+              <h5>Petite annonce Marketplace</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/coin.svg" alt="coin">
+              <h5>Collecte de fonds</h5>
+            </div>
+
+            <div class="menu-modal-content-right-item background-on-hover">
+              <img class="menu-modal-content-right-icon" src="images/briefcase.svg" alt="offre d'emploi">
+              <h5>Offre d'emploi</h5>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/bookmark.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Enregistrements</p>
+      <!-- Messenger Modal -->
+      <div class="messenger-modal">
+        <div class="messenger-modal-title">
+          <h3>Messenger</h3>
+          <img src="images/dots.svg" class="background-on-hover" alt="dots">
+          <img src="images/arrows-maximize.svg" class="background-on-hover" alt="agrandir">
+          <img src="images/video-plus.svg" class="background-on-hover" alt="video">
+          <img src="images/edit.svg" class="background-on-hover" alt="edit">
         </div>
+        <input type="text" placeholder="Rechercher dans Messenger">
+
+        <!-- List of items / messages on messenger -->
+        <div class="messenger-modal-item-wrapper">
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-6.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Madelyn Bowman</p>
+                <p class="messenger-modal-item-text-message">Ok, à bientôt. · 1h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-7.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Tomas Carpenter</p>
+                <p class="messenger-modal-item-text-message">Viens jouer à Rocket League g... · 1h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-8.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Tulisa Wilkinson</p>
+                <p class="messenger-modal-item-text-message">Vous: Il fait vraiment beau au... · 2h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-9.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Roberta Maxwell</p>
+                <p class="messenger-modal-item-text-message">😊😊😊😊😊 · 2h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-10.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Zoey Rubio</p>
+                <p class="messenger-modal-item-text-message">Vous: Le rapport est à rendre ... · 5h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Angela Dall</p>
+                <p class="messenger-modal-item-text-message">J'ai envie de hamburgers. 🍔 · 8h</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-12.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Kevin Phelps</p>
+                <p class="messenger-modal-item-text-message">Flemme de sortir aujourd'hui · 1j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-13.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Yousef Peralta</p>
+                <p class="messenger-modal-item-text-message">/watch?v=dQw4w9WgXcQ · 1j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-14.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Sarah-Jane Blackmore</p>
+                <p class="messenger-modal-item-text-message">Je t'envoie le dossier dès que j... · 2j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-15.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Shania Dickinson</p>
+                <p class="messenger-modal-item-text-message">Vous: J'écris tout ça pour tester... · 3j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-16.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Zayn Sullivan</p>
+                <p class="messenger-modal-item-text-message">Si tu scrolles, tu me vois. · 4j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+
+          <div class="messenger-modal-item background-on-hover">
+            <div class="messenger-modal-item-picture">
+              <img class="profile-pic" src="images/profile-17.jpg" alt="profile pic">
+              <div class="messenger-modal-item-text">
+                <p class="messenger-modal-item-text-name">Cassius Fritz</p>
+                <p class="messenger-modal-item-text-message">Je suis super content. 😁🤮 · 6j</p>
+              </div>
+            </div>
+            <img class="messenger-modal-item-option" src="images/dots.svg" alt="dots">
+          </div>
+        </div>
+        <p class="messenger-modal-bottom">Tout voir dans Messenger</p>
       </div>
 
-      <div class="main-wrapper-left-options-list">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/two_smartphones.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Pages</p>
+      <!-- Notification Modal -->
+      <div class="notification-modal">
+        <div class="notification-modal-title">
+          <h3>Notifications</h3>
+          <img src="images/dots.svg" class="background-on-hover" alt="dots">
         </div>
+        <div class="notification-modal-subtitle">
+          <h4>Plus tôt</h4>
+          <p class="background-on-hover">Voir tout</p>
+        </div>
+
+        <!-- Notifications list -->
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-12.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Kevin Phelps</span> a commenté la publication de <span class="notification-modal-name">Tulisa Wilkinson</span>.</p>
+            <p class="notification-modal-time">Il y a 1 heure</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble green" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-8.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Tulisa Wilkinson</span> a ajouté une publication.</p>
+            <p class="notification-modal-time">Il y a 1 heure</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-13.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Yousef Peralta</span> a publié un lien : « Il gagne 8000€ par mois grâce à une astuce très simple ».</p>
+            <p class="notification-modal-time">Il y a 2 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-5.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Olga Slaptovsky</span> a commenté votre publication.</p>
+            <p class="notification-modal-time">Il y a 4 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble green" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-3.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Hervé Martelin</span> aime votre publication.</p>
+            <p class="notification-modal-time">Il y a 4 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/like-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Angela Dall</span> a partagé la publication de <span class="notification-modal-name">Burger King France</span>.</p>
+            <p class="notification-modal-time">Il y a 7 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-16.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Zayn Sullivan</span> aime votre publication.</p>
+            <p class="notification-modal-time">Il y a 8 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/like-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-7.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Tomas Carpenter</span> a répondu à votre commentaire sur sa photo.</p>
+            <p class="notification-modal-time">Il y a 13 heures</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble green" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-11.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Angela Dall</span> aime votre commentaire : « Ce midi, c'est pizza. 🍕 ».</p>
+            <p class="notification-modal-time">Il y a un jour</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/like-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-15.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Shania Dickinson</span> a une nouvelle photo.</p>
+            <p class="notification-modal-time">Il y a un jour</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/comments-white.svg">
+        </div>
+
+        <div class="notification-modal-item background-on-hover">
+          <div class="notification-modal-item-picture">
+            <img class="profile-pic" src="images/profile-9.jpg" alt="profile pic">
+          </div>
+          <div class="notification-modal-item-text">
+            <p><span class="notification-modal-name">Roberta Maxwell</span> a publié un lien : « 18 photos de chatons tout mignons, la 4ème va vous étonner ! ».</p>
+            <p class="notification-modal-time">Il y a 2 jours</p>
+          </div>
+          <img class="notification-modal-item-option" src="images/dots.svg" alt="dots">
+          <img class="notification-modal-bubble blue" src="images/comments-white.svg">
+        </div>   
       </div>
 
-      <!-- Hidden options shown clicking on "Voir plus" button -->
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/clapperboard.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Vidéos de jeux</p>
+      <!-- "More" Modal with profile and settings -->
+      <div class="more-modal">
+        <div class="more-modal-title background-on-hover">
+          <div class="more-modal-title-picture">
+            <img class="profile-pic" src="images/profile-1.jpg" alt="profile pic">
+          </div>
+          <div class="more-modal-title-text">
+            <p class="more-modal-title-text-name">Maria Santos</p>
+            <p class="more-modal-title-text-option">Voir votre profil</p>
+          </div>
         </div>
-      </div>
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/headset.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Jouer à des jeux</p>
+        <span class="more-modal-separation"></span>
+        <div class="more-modal-avis background-on-hover">
+          <div class="more-modal-avis-picture">
+            <img class="profile-pic" src="images/message-report.svg" alt="report msg">
+          </div>
+          <div class="more-modal-avis-text">
+            <p class="more-modal-avis-text-title">Donner votre avis</p>
+            <p class="more-modal-avis-text-content">Aidez-nous à améliorer la nouvelle version de Facebook.</p>
+          </div>
         </div>
-      </div>
+        <span class="more-modal-separation"></span>
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/combo_chart.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Gestionnaire de publicités</p>
+        <!-- Options on more modal (Settings, help, display, log out... )-->
+        <div class="more-modal-option background-on-hover">
+          <img class="rounded-icon" src="images/settings.svg" alt="settings">
+          <p>Paramètres et confidentialité</p>
+          <img class="chevron" src="images/chevron-right.svg" alt="right">
         </div>
-      </div>
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/globe.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Centre d'information sur le climat</p>
+        <div class="more-modal-option background-on-hover">
+          <img class="rounded-icon" src="images/info-circle.svg" alt="info">
+          <p>Aide et assistance</p>
+          <img class="chevron" src="images/chevron-right.svg" alt="right">
         </div>
-      </div>
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/like-heart.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Collecte de fonds</p>
+        <div class="more-modal-option background-on-hover">
+          <img class="rounded-icon" src="images/moon.svg" alt="moon">
+          <p>Affichage et accessibilité</p>
+          <img class="chevron" src="images/chevron-right.svg" alt="right">
         </div>
-      </div>
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/diploma_1.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Offres d'emploi</p>
+        <div class="more-modal-option background-on-hover">
+          <img class="rounded-icon" src="images/logout.svg" alt="log out">
+          <p>Se déconnecter</p>
         </div>
+
+        <p class="more-modal-credits"><span>Confidentialité</span> · <span>Conditions générales</span> · <span>Publicités</span> · <span>Choix publicitaires</span> · <span>Cookies</span> · Facebook © 2021</p>
       </div>
+    </nav>
+    <!-- End Of Navigation Bar -->
 
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/oculus-rift.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Oculus</p>
-        </div>
-      </div>
-
-      <div class="main-wrapper-left-options-list hidden">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/messenger_logo.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Messenger</p>
-        </div>
-      </div>
-
-      <!-- "Voir plus" button -->
-      <div class="main-wrapper-left-options-list" id="main-wrapper-left-voir-plus">
-        <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-          <img src="images/chevron-down.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-          <p>Voir plus</p>
-        </div>
-      </div>
-
-      <span class="separation"></span>
-
-      <!-- Bottom part of main wrapper's left part -->
-      <div class="main-wrapper-left-bottom-part">
-        <div class="main-wrapper-left-shortcuts">
-          <h5>Vos raccourcis</h5>
-          <p class="background-on-hover-darker">Modifier</p>
+    <!-- Main Content Wrapper : Three different sections -->
+    <main class="main-wrapper">
+      <section class="main-wrapper-left">
+        
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/profile-1.jpg" class="profile-pic" alt="profile pic">
+            <p>Maria Santos</p>
+          </div>
         </div>
 
         <div class="main-wrapper-left-options-list">
           <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-            <img src="images/logo-github.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-            <a href="https://github.com/PierreWagon" target="_blank"> <p>PierreWagon's Github</p> </a>
+            <img src="images/collaboration.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Amis</p>
+          </div>
+        </div>
+
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/shop.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Marketplace</p>
+          </div>
+        </div>
+
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/clock.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Souvenirs</p>
+          </div>
+        </div>
+
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/calendar.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Évènements</p>
           </div>
         </div>
 
         <div class="main-wrapper-left-options-list">
           <div class="main-wrapper-left-options-list-option background-on-hover-darker">
             <img src="images/conference_call.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-            <p>Les amis de l'apéro</p>
+            <p>Groupes</p>
           </div>
         </div>
 
         <div class="main-wrapper-left-options-list">
           <div class="main-wrapper-left-options-list-option background-on-hover-darker">
-            <img src="images/wikipedia.svg" class="main-wrapper-left-options-icon" alt="menu icon">
-            <p>Apprendre à coder pour les nuls</p>
+            <img src="images/selfie.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <div class="main-wrapper-left-options-list-option-watch">
+            <p>Watch</p>
+            <p><img src="images/point.svg" alt="point">5 nouvelles vidéos</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <p class="more-modal-credits main-wrapper-left-credits"><span>Confidentialité</span> · <span>Conditions générales</span> · <span>Publicités</span> · <span>Choix publicitaires</span> · <span>Cookies</span> · Facebook © 2021</p>
-    <!-- End of main wrapper's left part -->
-    </section>
-
-
-    <!-- Main wrapper middle part -->
-    <section class="main-wrapper-middle">
-
-
-
-
-    <!-- End of main wrapper's middle part-->
-    </section>
-
-    <!-- Main wrapper right part -->
-    <section class="main-wrapper-right">
-      <h5>Sponsorisé</h5>
-
-      <div class="main-wrapper-right-ad background-on-hover-darker">
-        <img src="images/phone-ad.jpg" alt="phone pic" class="main-wrapper-right-ad-picture">
-        <div class="main-wrapper-right-ad-text">
-          <p class="ad-name">📱 Mobiles à bon prix</p>
-          <p class="ad-address">phone.com</p>
-        </div>
-      </div>
-
-      <div class="main-wrapper-right-ad background-on-hover-darker">
-        <img src="images/car-ad.jpg" alt="beer pic" class="main-wrapper-right-ad-picture">
-        <div class="main-wrapper-right-ad-text">
-          <p class="ad-name">Location de voitures</p>
-          <p class="ad-address">auto.fr</p>
-        </div>
-      </div>
-
-      <span class="separation"></span>
-
-      <div class="main-wrapper-right-contacts">
-        <div class="main-wrapper-right-contacts-title">
-          <h5>Contacts</h5>
-          <img src="images/video-plus.svg" alt="icon" class="background-on-hover-darker">
-          <img src="images/search.svg" alt="icon" class="background-on-hover-darker">
-          <img src="images/dots.svg" alt="icon" class="background-on-hover-darker">
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/bookmark.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Enregistrements</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-10.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Zoey Rubio</p>
+        <div class="main-wrapper-left-options-list">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/two_smartphones.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Pages</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-16.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Zayn Sullivan</p>
+        <!-- Hidden options shown clicking on "Voir plus" button -->
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/clapperboard.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Vidéos de jeux</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-9.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Roberta Maxwell</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/headset.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Jouer à des jeux</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-6.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Madelyn Bowman</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/combo_chart.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Gestionnaire de publicités</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-12.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Kevin Phelps</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/globe.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Centre d'information sur le climat</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-14.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Sarah-Jane Blackmore</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/like-heart.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Collecte de fonds</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-11.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Angela Dall</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/diploma_1.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Offres d'emploi</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-13.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Yousef Peralta</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/oculus-rift.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Oculus</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-8.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Tulisa Wilkinson</p>
+        <div class="main-wrapper-left-options-list hidden">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/messenger_logo.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Messenger</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-3.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Hervé Martelin</p>
+        <!-- "Voir plus" button -->
+        <div class="main-wrapper-left-options-list" id="main-wrapper-left-voir-plus">
+          <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+            <img src="images/chevron-down.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+            <p>Voir plus</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-7.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Tomas Carpenter</p>
+        <span class="separation"></span>
+
+        <!-- Bottom part of main wrapper's left part -->
+        <div class="main-wrapper-left-bottom-part">
+          <div class="main-wrapper-left-shortcuts">
+            <h5>Vos raccourcis</h5>
+            <p class="background-on-hover-darker">Modifier</p>
+          </div>
+
+          <div class="main-wrapper-left-options-list">
+            <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+              <img src="images/logo-github.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+              <a href="https://github.com/PierreWagon" target="_blank"> <p>PierreWagon's Github</p> </a>
+            </div>
+          </div>
+
+          <div class="main-wrapper-left-options-list">
+            <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+              <img src="images/conference_call.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+              <p>Les amis de l'apéro</p>
+            </div>
+          </div>
+
+          <div class="main-wrapper-left-options-list">
+            <div class="main-wrapper-left-options-list-option background-on-hover-darker">
+              <img src="images/wikipedia.svg" class="main-wrapper-left-options-icon" alt="menu icon">
+              <p>Apprendre à coder pour les nuls</p>
+            </div>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-17.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Cassius Fritz</p>
+        <p class="more-modal-credits main-wrapper-left-credits"><span>Confidentialité</span> · <span>Conditions générales</span> · <span>Publicités</span> · <span>Choix publicitaires</span> · <span>Cookies</span> · Facebook © 2021</p>
+      <!-- End of main wrapper's left part -->
+      </section>
+
+
+      <!-- Main wrapper middle part -->
+      <section class="main-wrapper-middle">
+        <div class="main-wrapper-middle-scrollhelper">
+
+          <div class="main-wrapper-middle-stories-navigation">
+            <img id="stories-go-left" class="stories-arrow" src="images/chevron-left.svg" alt="left arrow">
+            <img id="stories-go-right" class="stories-arrow" src="images/chevron-right.svg" alt="right arrow">
+          </div>
+
+          <div class="main-wrapper-middle-stories-wrapper">
+            <!-- List of stories -->
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/profile-1.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-self-text">
+                <p>Créer une story</p>
+              </div>
+              <img class="story-plus" src="images/plus-white.svg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-1.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Angela Dall</p>
+              </div>
+              <img class="story-profile" src="images/profile-11.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-2.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Shania Dickinson</p>
+              </div>
+              <img class="story-profile" src="images/profile-15.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-3.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Yousef Peralta</p>
+              </div>
+              <img class="story-profile" src="images/profile-13.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-4.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Sarah-Jane Blackmore</p>
+              </div>
+              <img class="story-profile" src="images/profile-14.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-5.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Tulisa Wilkinson</p>
+              </div>
+              <img class="story-profile" src="images/profile-8.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-6.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Kevin Phelps</p>
+              </div>
+              <img class="story-profile" src="images/profile-12.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-7.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Tomas Carpenter</p>
+              </div>
+              <img class="story-profile" src="images/profile-7.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-8.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Savoie ou bien ?</p>
+              </div>
+              <img class="story-profile" src="images/filouxzm.jpg" alt="plus">
+            </div>
+
+            <div class="main-wrapper-middle-stories-item">
+              <img class="story-pic" src="images/story-9.jpg" alt="story picture">
+              <div class="main-wrapper-middle-stories-item-text">
+                <p>Hervé Martelin</p>
+              </div>
+              <img class="story-profile" src="images/profile-3.jpg" alt="plus">
+            </div>      
+            <!-- End of Stories wrapper -->
+          </div>
+
+          <!-- Create a publication -->
+          <div class="main-wrapper-middle-publication">
+
+            <div class="main-wrapper-middle-publication-profile">
+              <div class="main-wrapper-middle-publication-profile-picture">
+                <img src="images/profile-1.jpg" alt="profile-pic" class="profile-pic">
+              </div>
+              <p class="background-on-hover-darker create-publication">Quoi de neuf, Maria ?</p>
+            </div>
+
+            <div class="main-wrapper-middle-publication-options-wrapper">
+
+              <div class="main-wrapper-middle-publication-option background-on-hover">
+                <img src="images/video_call.svg" alt="camera">
+                <p>Vidéo en direct</p>
+              </div>
+
+              <div class="main-wrapper-middle-publication-option background-on-hover">
+                <img src="images/stack_of_photos.svg" alt="pictures">
+                <p>Photo/Vidéo</p>
+              </div>
+
+              <div class="main-wrapper-middle-publication-option background-on-hover">
+                <img src="images/heureux.svg" alt="smiley">
+                <p>Humeur/Activité</p>
+              </div>
+
+            </div>
+
+            <!-- Publication modal -->
+            <div class="main-wrapper-middle-publication-modal-event-disabler"></div>
+            <div class="main-wrapper-middle-publication-modal">
+              <div class="main-wrapper-middle-publication-modal-title">
+                <h3>Créer une publication</h3>
+                <img src="images/x.svg" alt="close" class="background-on-hover-darkest main-wrapper-middle-publication-modal-close">
+              </div>
+
+              <div class="main-wrapper-middle-publication-modal-profile">
+                <img class="profile-pic" src="images/profile-1.jpg" alt="profile pic">
+                <div class="main-wrapper-middle-publication-modal-profile-text">
+                  <p>Maria Santos</p>
+                  <p class="main-wrapper-middle-publication-modal-profile-text-bubble"><img src="images/friends.svg" alt="friends"> Amis <img src="images/caret-down.svg" alt="down arrow"> </p>
+                </div>
+              </div>
+
+              <textarea class="main-wrapper-middle-publication-modal-input" placeholder="Quoi de neuf, Maria ?"></textarea>
+              <div class="main-wrapper-middle-publication-modal-input-options">
+                <img src="images/rating.svg" alt="star">
+                <img src="images/heureux.svg" alt="smiley">
+              </div>
+
+              <div class="main-wrapper-middle-publication-modal-input-more-options">
+                <p>Ajouter à votre publication</p>
+                <img src="images/stack_of_photos.svg" alt="pictures" class="background-on-hover">
+                <img src="images/collaboration.svg" alt="pictures" class="background-on-hover">
+                <img src="images/heureux.svg" alt="pictures" class="background-on-hover">
+                <img src="images/karaoke.svg" alt="pictures" class="background-on-hover">
+                <img src="images/dots.svg" alt="pictures" class="background-on-hover">
+              </div>
+
+              <button type="button" class="publication-modal-btn" disabled>Publier</button>
+            </div> <!-- End of publication modal -->
+          </div>
+
+          <div class="main-wrapper-middle-videoroom">
+            <div class="main-wrapper-middle-videoroom-button background-on-hover videoroom-button-contacts">
+              <img src="images/video_call_blue.svg" alt="camera">
+              <p>Créer un salon</p>
+            </div>
+            
+            <!-- List of video chatroom contacts -->
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-16.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-9.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-6.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-12.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-14.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-11.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-13.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-8.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-3.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-7.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-17.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <div class="main-wrapper-middle-videoroom-contact videoroom-button-contacts">
+              <img src="images/profile-15.jpg" alt="profile pic" class="profile-pic">
+              <div class="connected-icon"></div>
+            </div>
+
+            <img src="images/chevron-left.svg" alt="left arrow" class="videoroom-arrow background-on-hover" id="videoroom-arrow-left">
+            <img src="images/chevron-right.svg" alt="right arrow" class="videoroom-arrow background-on-hover" id="videoroom-arrow-right">
+
+          </div>
+
+          <div class="main-wrapper-middle-new-publication">
+            <!-- Dynamically generated publications -->
+          </div>
+
+          <!-- List of static publications to fill the page -->
+
+          <!-- Beginning of one publication -->
+          <div class="main-wrapper-middle-static-publication">
+            <div class="main-wrapper-middle-static-publication-title">
+              <img src="images/profile-7.jpg" alt="profile pic" class="profile-pic">
+              <div class="main-wrapper-middle-static-publication-title-text">
+                <p>Tomas Carpenter</p>
+                <p>1 h · <img src="images/world.svg" alt="icon"></p>
+              </div>
+              <img src="images/dots.svg" alt="icon about" class="dots background-on-hover-darker">
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-content">
+              <p>La fleur en bouquet fane... Et jamais ne renaît.</p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-likes-wrapper">
+              <img src="images/thumb-up-white.svg" alt="thumb up" class="blue">
+              <p class="main-wrapper-middle-static-publication-likes-number"> 3</p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-reactions">
+              <p class="main-wrapper-middle-static-publication-reactions-item like background-on-hover"><img src="images/thumb-up.svg" alt="icon"> J'aime </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item comment background-on-hover"><img src="images/message-dots.svg" alt="icon"> Commenter </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item background-on-hover"><img src="images/share.svg" alt="icon"> Partager </p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-comment">
+              <img src="images/profile-1.jpg" alt="profile pic" class="profile-pic">
+              <input type="text" placeholder="Écrivez un commentaire..." class="comment-input">
+              <div class="main-wrapper-middle-static-publication-comment-options">
+                <img src="images/mood-smile.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/camera.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/movie.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/sticker.svg" alt="icon" class="background-on-hover-darkest">
+              </div>
+            </div>
+          </div>
+          <!-- End of one publication -->
+
+          <!-- Beginning of one publication -->
+          <div class="main-wrapper-middle-static-publication">
+            <div class="main-wrapper-middle-static-publication-title">
+              <img src="images/profile-11.jpg" alt="profile pic" class="profile-pic">
+              <div class="main-wrapper-middle-static-publication-title-text">
+                <p>Angela Dall</p>
+                <p>3 h · <img src="images/world.svg" alt="icon"></p>
+              </div>
+              <img src="images/dots.svg" alt="icon about" class="dots background-on-hover-darker">
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-content">
+              <p>Petite faim ce soir. 🍕</p>
+              <img src="images/publication-1.jpg" alt="publication" class="publication-picture">
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-likes-wrapper">
+              <img src="images/thumb-up-white.svg" alt="thumb up" class="blue">
+              <p class="main-wrapper-middle-static-publication-likes-number"> 8 </p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-reactions">
+              <p class="main-wrapper-middle-static-publication-reactions-item like background-on-hover"><img src="images/thumb-up.svg" alt="icon"> J'aime </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item comment background-on-hover"><img src="images/message-dots.svg" alt="icon"> Commenter </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item background-on-hover"><img src="images/share.svg" alt="icon"> Partager </p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-comment">
+              <img src="images/profile-1.jpg" alt="profile pic" class="profile-pic">
+              <input type="text" placeholder="Écrivez un commentaire..." class="comment-input">
+              <div class="main-wrapper-middle-static-publication-comment-options">
+                <img src="images/mood-smile.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/camera.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/movie.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/sticker.svg" alt="icon" class="background-on-hover-darkest">
+              </div>
+            </div>
+          </div>
+          <!-- End of one publication -->
+
+          <!-- Beginning of one publication -->
+          <div class="main-wrapper-middle-static-publication">
+            <div class="main-wrapper-middle-static-publication-title">
+              <img src="images/profile-13.jpg" alt="profile pic" class="profile-pic">
+              <div class="main-wrapper-middle-static-publication-title-text">
+                <p>Yousef Peralta</p>
+                <p>5 h · <img src="images/world.svg" alt="icon"></p>
+              </div>
+              <img src="images/dots.svg" alt="icon about" class="dots background-on-hover-darker">
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-content">
+              <p>Astuce très simple !!!</p>
+              <img src="images/story-3.jpg" alt="publication" class="publication-picture">
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-likes-wrapper">
+              <img src="images/thumb-up-white.svg" alt="thumb up" class="blue">
+              <p class="main-wrapper-middle-static-publication-likes-number"> 155 </p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-reactions">
+              <p class="main-wrapper-middle-static-publication-reactions-item like background-on-hover"><img src="images/thumb-up.svg" alt="icon"> J'aime </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item comment background-on-hover"><img src="images/message-dots.svg" alt="icon"> Commenter </p>
+              <p class="main-wrapper-middle-static-publication-reactions-item background-on-hover"><img src="images/share.svg" alt="icon"> Partager </p>
+            </div>
+
+            <div class="main-wrapper-middle-static-publication-comment">
+              <img src="images/profile-1.jpg" alt="profile pic" class="profile-pic">
+              <input type="text" placeholder="Écrivez un commentaire..." class="comment-input">
+              <div class="main-wrapper-middle-static-publication-comment-options">
+                <img src="images/mood-smile.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/camera.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/movie.svg" alt="icon" class="background-on-hover-darkest">
+                <img src="images/sticker.svg" alt="icon" class="background-on-hover-darkest">
+              </div>
+            </div>
+          </div>
+          <!-- End of one publication -->
+
+          <!-- End of scroll helper-->
+        </div>   
+
+      <!-- End of main wrapper's middle part-->
+      </section>
+
+      <!-- Main wrapper right part -->
+      <section class="main-wrapper-right">
+        <h5>Sponsorisé</h5>
+
+        <div class="main-wrapper-right-ad background-on-hover-darker">
+          <img src="images/phone-ad.jpg" alt="phone pic" class="main-wrapper-right-ad-picture">
+          <div class="main-wrapper-right-ad-text">
+            <p class="ad-name">📱 Mobiles à bon prix</p>
+            <p class="ad-address">phone.com</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/profile-15.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Shania Dickinson</p>
-        </div>
-      </div>
-
-      <span class="separation"></span>
-
-      <div class="main-wrapper-right-group-chat">
-        <h5>Conversations de groupe</h5>
-
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/filouxzm.jpg" alt="profile pic" class="profile-pic">
-          <div class="connected-icon"></div>
-          <p>Savoie ou bien ?</p>
+        <div class="main-wrapper-right-ad background-on-hover-darker">
+          <img src="images/car-ad.jpg" alt="beer pic" class="main-wrapper-right-ad-picture">
+          <div class="main-wrapper-right-ad-text">
+            <p class="ad-name">Location de voitures</p>
+            <p class="ad-address">auto.fr</p>
+          </div>
         </div>
 
-        <div class="main-wrapper-right-contacts-item background-on-hover-darker">
-          <img src="images/plus.svg" alt="profile pic" class="profile-pic plus">
-          <p>Créer un nouveau groupe</p>
+        <span class="separation"></span>
+
+        <div class="main-wrapper-right-contacts">
+          <div class="main-wrapper-right-contacts-title">
+            <h5>Contacts</h5>
+            <img src="images/video-plus.svg" alt="icon" class="background-on-hover-darker">
+            <img src="images/search.svg" alt="icon" class="background-on-hover-darker">
+            <img src="images/dots.svg" alt="icon" class="background-on-hover-darker">
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-10.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Zoey Rubio</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-16.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Zayn Sullivan</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-9.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Roberta Maxwell</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-6.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Madelyn Bowman</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-12.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Kevin Phelps</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-14.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Sarah-Jane Blackmore</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-11.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Angela Dall</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-13.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Yousef Peralta</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-8.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Tulisa Wilkinson</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-3.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Hervé Martelin</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-7.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Tomas Carpenter</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-17.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Cassius Fritz</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/profile-15.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Shania Dickinson</p>
+          </div>
         </div>
-      </div>
-    <!-- End of main wrapper's right part-->
-    </section>
+
+        <span class="separation"></span>
+
+        <div class="main-wrapper-right-group-chat">
+          <h5>Conversations de groupe</h5>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/filouxzm.jpg" alt="profile pic" class="profile-pic">
+            <div class="connected-icon"></div>
+            <p>Savoie ou bien ?</p>
+          </div>
+
+          <div class="main-wrapper-right-contacts-item background-on-hover-darker">
+            <img src="images/plus.svg" alt="profile pic" class="profile-pic plus">
+            <p>Créer un nouveau groupe</p>
+          </div>
+        </div>
+      <!-- End of main wrapper's right part-->
+      </section>
 
 
-  </main>
-
+    </main>
+    <!-- End of global wrapper-->
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
