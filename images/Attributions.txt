@@ -1,4 +1,18 @@
-Freepik : Some icons
+Freepik : Icons from flaticon.com
 Dave Gandy : GitHub icon
 Viktor Talashuk : Phone picture used for fake ad
 Roland Denes : Car used for fake ad
+
+--- Stories pictures found on unsplash.com ---
+Mae Mu : Burger picture
+Maarten van den Heuvel : Beach picture
+Giorgio Trovato : Money picture
+Boxed Water Is Better : Fitness picture
+Hayley Seibel : Motivational picture
+Edgar : Cat picture
+Erik Mclean : Gaming picture
+Ardi Evans : Drink picture
+Pawel Czerwinski : Abstract picture
+
+--- Publications pictures found on unsplash.com ---
+Alan Hardman : Pizza picture
