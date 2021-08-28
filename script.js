@@ -176,6 +176,8 @@ publicationInput.addEventListener('input', function() {
 publicationBtn.addEventListener('click', function() {
     publicationModal.classList.remove('active');
     publicationModalSecurity.classList.remove('active');
+    addPublication(publicationInput.value);
+    publicationInput.value = "";
 })
 
 
@@ -203,25 +205,81 @@ chatRoomLeftArrow.addEventListener('click', function() {
 
 
 // Turns like button to blue when activated and adds 1 to like counter
-const likeBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.like');
+let likeBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.like');
 
-likeBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        btn.classList.toggle('active');
-        if (btn.classList.contains('active')) {
-            btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) + 1;
-        }
-        else {
-            btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) - 1;
-        }
+function likePublication() {
+    likeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {
+                btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) + 1;
+            }
+            else {
+                btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) - 1;
+            }
+        })
     })
-})
+}
 
 // Puts focus on comment input when clicking on comment button
-const commentBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.comment');
+let commentBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.comment');
 
-commentBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        btn.parentNode.nextElementSibling.querySelector('input').focus();
+function commentPublication() {
+    commentBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            btn.parentNode.nextElementSibling.nextElementSibling.querySelector('input').focus();
+        })
     })
-})
+}
+
+
+// Allows the user to create publications
+function addPublication(message) {
+    const publicationGoesHere = document.querySelector('.main-wrapper-middle-new-publication');
+    const newPublication = document.createElement("div");
+    newPublication.className = 'main-wrapper-middle-static-publication';
+    newPublication.innerHTML = "\<div class=\"main-wrapper-middle-static-publication-title\"\> \<img src=\"images/profile-1.jpg\" alt=\"profile pic\" class=\"profile-pic\"\> \<div class=\"main-wrapper-middle-static-publication-title-text\"\> \<p\>Maria Santos\</p\>  \<p\>A l'instant · \<img src=\"images/world.svg\" alt=\"icon\"\>\</p\> \</div\> \<img src=\"images/dots.svg\" alt=\"icon about\" class=\"dots background-on-hover-darker\"\> \</div\> \<div class=\"main-wrapper-middle-static-publication-content\"\> " + "\<p\>" + message + "\</p\> \</div\>    \<div class=\"main-wrapper-middle-static-publication-likes-wrapper\"\> \<img src=\"images/thumb-up-white.svg\" alt=\"thumb up\" class=\"blue\"\> \<p class=\"main-wrapper-middle-static-publication-likes-number\"\> 0\</p\> \</div\> \<div class=\"main-wrapper-middle-static-publication-reactions\"\> \<p class=\"main-wrapper-middle-static-publication-reactions-item like background-on-hover\"\>\<img src=\"images/thumb-up.svg\" alt=\"icon\"\> J'aime \</p\> \<p class=\"main-wrapper-middle-static-publication-reactions-item comment background-on-hover\"\>\<img src=\"images/message-dots.svg\" alt=\"icon\"\> Commenter \</p\> \<p class=\"main-wrapper-middle-static-publication-reactions-item background-on-hover\"\>\<img src=\"images/share.svg\" alt=\"icon\"\> Partager \</p\> \</div\> \<div class=\"main-wrapper-middle-static-publication-written-comments-wrapper\"\>\</div\> \<div class=\"main-wrapper-middle-static-publication-comment\"\> \<img src=\"images/profile-1.jpg\" alt=\"profile pic\" class=\"profile-pic\"\> \<input type=\"text\" placeholder=\"Écrivez un commentaire...\" class=\"comment-input\"\> \<div class=\"main-wrapper-middle-static-publication-comment-options\"\> \<img src=\"images/mood-smile.svg\" alt=\"icon\" class=\"background-on-hover-darkest\"\> \<img src=\"images/camera.svg\" alt=\"icon\" class=\"background-on-hover-darkest\"\> \<img src=\"images/movie.svg\" alt=\"icon\" class=\"background-on-hover-darkest\"\> \<img src=\"images/sticker.svg\" alt=\"icon\" class=\"background-on-hover-darkest\"\> \</div\> \</div\> \</div\>";
+    publicationGoesHere.prepend(newPublication);
+    newPublication.style.animation = "fadeIn 0.5s linear forwards";
+    likeBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.like');
+    commentBtns = document.querySelectorAll('.main-wrapper-middle-static-publication-reactions-item.comment');
+    getPublicationInputList();
+    likePublication();
+    commentPublication();
+}
+
+// Allows the user to comment publications
+function addComment(message) {
+    const commentGoesHere = message.parentNode.previousElementSibling;
+    const newComment = document.createElement("div");
+    newComment.className = 'main-wrapper-middle-static-publication-written-comments';
+    newComment.innerHTML = "\<img src=\"images/profile-1.jpg\" alt=\"profile pic\" class=\"profile-pic\"\> \<div class=\"main-wrapper-middle-static-publication-written-comments-text\"\> \<p class=\"written-comment-name\">Maria Santos\</p\> \<p class=\"written-comment-text\"\> "+ message.value + "\</p\>";
+    commentGoesHere.append(newComment);
+    newComment.style.animation = "fadeIn 0.5s linear forwards";
+    message.value = "";
+}
+
+
+// Refreshes the publications inputs list
+function getPublicationInputList() {
+    let publicationInputList = document.querySelectorAll('.main-wrapper-middle-static-publication-comment');
+    publicationInputList.forEach(publi => {
+        publi.addEventListener('keyup', e => {
+            if (e.key === 'Enter' && e.path[0].value != "") {
+                addComment(e.path[0]);
+            }
+        })
+    })
+}
+
+
+  /* ------------------------------------------------------------- */
+ /* ------------------- PAGE LOAD BEHAVIOUR --------------------- */
+/* ------------------------------------------------------------- */
+let publicationInputList = document.querySelectorAll('.main-wrapper-middle-static-publication-comment');
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    likePublication();
+    commentPublication();
+    getPublicationInputList();
+  });
