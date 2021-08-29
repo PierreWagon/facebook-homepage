@@ -282,4 +282,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     likePublication();
     commentPublication();
     getPublicationInputList();
-  });
+
+    if (window.screen.width <= 535) { //Change search input placeholder text for small screens
+        document.querySelector('.navbar-wrapper input').placeholder = "Rechercher";
+    }
+});
