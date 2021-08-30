@@ -1,6 +1,7 @@
 # Facebook Homepage Clone
 
-Since I'm a beginner in Front-End Development, I wanted to improve by trying to reproduce a website that I know well.
+As a beginner in Front-End Development, I wanted to improve by trying to reproduce a website that I know well.
+My goal is to make something working properly and as close as possible from the original Facebook design.
 
 ## Features
 
