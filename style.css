@@ -1831,8 +1831,8 @@ a {
         top: 0;
         left: 0;
         min-width: 100vw;
-        height: calc(100vh - 80px);
-        z-index: 1000;
+        height: calc(100vh - 70px);
+        z-index: 3;
         background-color: #F0F2F5;
         margin-top: 70px;
         padding: 16px;
