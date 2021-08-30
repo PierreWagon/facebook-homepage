@@ -23,6 +23,8 @@ Since I'm a beginner in Front-End Development, I wanted to improve by trying to 
 
 - Display an animation using the search bar
 
+- Mobile navigation menu for screens with a width of 1200px or less
+
 
 
 ## Screenshots
