@@ -82,6 +82,15 @@ moreBtn.addEventListener('click', e => {
     notificationBtn.classList.remove('active');
 })
 
+// Shows mobile menu
+const mobileMenu = document.querySelector('.main-wrapper-left');
+const mobileMenuBtn = document.querySelector('.navbar-icon.mobile-menu');
+
+mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    mobileMenuBtn.classList.toggle('current');
+})
+
   /* ------------------------------------------------------------- */
  /* ------------------- MAIN MENU LEFT PART --------------------- */
 /* ------------------------------------------------------------- */
@@ -209,16 +218,29 @@ let likeBtns = document.querySelectorAll('.main-wrapper-middle-static-publicatio
 
 function likePublication() {
     likeBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            btn.classList.toggle('active');
-            if (btn.classList.contains('active')) {
-                btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) + 1;
-            }
-            else {
-                btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) - 1;
-            }
-        })
+        // btn.addEventListener('click', function() {
+        //     console.log(btn.classList.contains('active'));
+        //     btn.classList.toggle('active');
+        //     if (btn.classList.contains('active')) {
+        //         btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) + 1;
+        //     }
+        //     else {
+        //         btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(btn.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) - 1;
+        //     }
+        // })
+        btn.addEventListener('click', addLike);
     })
+}
+
+function addLike() {
+        //console.log(this);
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+            this.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(this.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) + 1;
+        }
+        else {
+            this.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText = parseInt(this.parentNode.previousElementSibling.querySelector('.main-wrapper-middle-static-publication-likes-number').innerText, 10) - 1;
+        }
 }
 
 // Puts focus on comment input when clicking on comment button
@@ -283,7 +305,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     commentPublication();
     getPublicationInputList();
 
-    if (window.screen.width <= 535) { //Change search input placeholder text for small screens
+    if (window.screen.width <= 574) { //Change search input placeholder text for small screens
         document.querySelector('.navbar-wrapper input').placeholder = "Rechercher";
     }
 });
